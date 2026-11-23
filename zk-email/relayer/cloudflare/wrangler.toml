@@ -1,0 +1,19 @@
+name = "zk-email-verifier-worker"
+main = "worker.js"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+BACKEND_API_URL = "https://relayer.rationalprocess.eth.limo"
+WORKER_SECRET = "soonami_production_secret_key_2026"
+
+# Email routing rule configuration:
+# Intercepts all emails sent to verify-*@rationalprocess.eth
+# Ensure custom domain email routing is activated in Cloudflare dashboard
+[[send_email]]
+name = "SEND_EMAIL"
+
+# Production environment override
+[env.production]
+name = "zk-email-verifier-worker-prod"
+vars = { BACKEND_API_URL = "https://relayer.rationalprocess.eth.limo" }

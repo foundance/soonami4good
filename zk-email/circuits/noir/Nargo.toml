@@ -1,0 +1,10 @@
+[package]
+name = "zk_email_ballot_verifier"
+type = "bin"
+authors = ["Scientific Vote Cryptography Working Group"]
+compiler_version = ">=0.30.0"
+
+[dependencies]
+# DKIM & RSA verification library in Noir
+dkim = { tag = "v0.3.0", git = "https://github.com/zkemail/noir-rsa" }
+poseidon = { tag = "v0.1.0", git = "https://github.com/noir-lang/poseidon" }

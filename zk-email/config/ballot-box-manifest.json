@@ -1,0 +1,24 @@
+{
+  "module": "zk-email-ballot-box",
+  "version": "1.0.0",
+  "target_circuit": "Circom v2.1+",
+  "verification_standard": "Groth16 / SnarkJS",
+  "data_integrity": {
+    "merkle_tree": "Poseidon",
+    "signature_scheme": "PKCS#1 v1.5 RSA-2048/4096"
+  },
+  "parameters": {
+    "max_header_bytes": 1024,
+    "rsa_key_bits": [2048, 4096],
+    "merkle_tree_depth": 9,
+    "max_candidates": 300,
+    "hash_function": "bn254_poseidon",
+    "nullifier_derivation": "Poseidon(seat_id, election_epoch, dkim_pubkey_hash)"
+  },
+  "security_invariants": {
+    "slide_10_compliance": "strict_non_custodial",
+    "server_side_secrets": false,
+    "dkim_rotation_support": "dnssec_trust_chain_snapshotting",
+    "fallback_strategy": "orcid_oauth_openalex_bridge"
+  }
+}
