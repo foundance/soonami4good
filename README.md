@@ -11,7 +11,7 @@ An audited, non-custodial decentralized epistemic governance protocol and ZK-Ema
   * Groth16 Verifier (BN254 Pairing): [Groth16Verifier.sol](./zk-email/contracts/Groth16Verifier.sol)
   * Panel Registry & Ballot Box: [PanelRegistry.sol](./zk-email/contracts/PanelRegistry.sol)
 * **Full Architectural Documentation:** [docs/README.md](./docs/README.md)
-* **Docs:** [docs/SECURITY_AUDIT_AND_FIXES.md](./documentation)
+* **Docs:** [docs](./documentation)
 
 ---
 
